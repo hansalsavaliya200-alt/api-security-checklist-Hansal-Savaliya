@@ -29,7 +29,7 @@ All examples use a **local demo with fictional data**. Nothing here targets a re
 1. Researched OWASP API Security Top 10 (2023), OWASP cheat sheets, NIST SP 800-228 and relevant RFCs.
 2. Turned the guidance into numbered, testable checklist items (priority + how to verify).
 3. Built a small Flask API (fictional users/notes) that demonstrates the controls.
-4. Added 24 automated tests and a `curl` walkthrough to exercise the API controls and frontend routes.
+4. Added 25 automated tests and a `curl` walkthrough to exercise the API controls and frontend routes.
 5. Documented limitations honestly in the report.
 
 ## Repository structure
@@ -108,6 +108,7 @@ Fictional demo accounts: `alice` / `demo-password-alice` and `bob` / `demo-passw
 
 ## Safety notes
 - The server binds to `127.0.0.1` only and has debug mode off. Do not expose it to a network.
+- Rate limiting keys off the direct connection address and ignores `X-Forwarded-For`; if deployed behind a proxy, configure trusted proxy handling at the gateway before relying on client-specific limits.
 - All accounts and data are fictional. No real secrets are stored in this repository.
 - Security testing was done only against this local demo.
 

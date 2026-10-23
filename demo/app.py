@@ -113,11 +113,6 @@ def error(status, code, message, headers=None):
 
 
 def get_client_ip():
-    forwarded = request.headers.get("X-Forwarded-For", "")
-    if forwarded:
-        return forwarded.split(",")[0].strip() or "unknown"
-    if request.access_route:
-        return request.access_route[0]
     return request.remote_addr or "unknown"
 
 

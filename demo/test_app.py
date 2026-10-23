@@ -139,6 +139,22 @@ class ApiSecurityTests(unittest.TestCase):
         self.assertEqual(codes[:5], [401] * 5)
         self.assertEqual(codes[5], 429)
 
+    def test_rate_limit_cannot_be_bypassed_with_spoofed_forwarded_header(self):
+        for attempt in range(5):
+            response = self.c.post(
+                "/api/v1/login",
+                json={"username": "alice", "password": "x"},
+                headers={"X-Forwarded-For": f"198.51.100.{attempt + 1}"},
+            )
+            self.assertEqual(response.status_code, 401)
+
+        blocked = self.c.post(
+            "/api/v1/login",
+            json={"username": "alice", "password": "x"},
+            headers={"X-Forwarded-For": "198.51.100.6"},
+        )
+        self.assertEqual(blocked.status_code, 429)
+
     def test_429_has_retry_after(self):
         for _ in range(5):
             self.c.post("/api/v1/login", json={"username": "alice", "password": "x"})
