@@ -5,7 +5,7 @@
 **Organisation:** RedKross Research Foundation Internship  
 **Assignment:** API Security  
 **Report date:** 24 October 2026  
-**GitHub repository:** `[Add repository URL before submission]`  
+**GitHub repository:** https://github.com/hansalsavaliya200-alt/api-security-checklist-Hansal-Savaliya  
 **Explanatory video:** `[Add video URL before submission]`
 
 ---
