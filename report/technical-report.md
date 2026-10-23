@@ -14,7 +14,7 @@
 
 For my API Security assignment, I prepared a checklist for REST and web APIs, examples of safer request and response design, research notes, and a small Flask demo using fictional accounts and data. I organized the checklist around the security topics in my assignment.
 
-The demo lets users sign in and manage only their own notes. It also checks request data, applies a simple in-memory rate limit, returns consistent errors and security headers, and shows deprecation headers on an older API route. Flask serves the browser interface and API from the same local server. On 24 October 2026, all 24 automated tests passed in 2.603 seconds using Python 3.12.10. The demo is for learning and is not a production service or a penetration test.
+The demo lets users sign in and manage only their own notes. It also checks request data, applies a simple in-memory rate limit, returns consistent errors and security headers, and shows deprecation headers on an older API route. Flask serves the browser interface and API from the same local server. On 24 October 2026, all 24 automated tests passed in 2.643 seconds using Python 3.12.10. The demo is for learning and is not a production service or a penetration test.
 
 ## 1. Objective and Scope
 
@@ -47,6 +47,9 @@ I included a few publicly reported incidents to explain why these controls matte
 | Research notes | `report/research-notes.md` | Source summaries, context, and research caveats |
 | References | `references.md` | Standards, guidance, incident reporting, and framework documentation |
 | Test record | `screenshots/test-results.txt` | Environment, command, and latest full test-suite result |
+| Test-run image | `screenshots/Automated Tests - Current.png` | Rendered summary of the captured 24-test run |
+| Frontend image | `screenshots/Frontend UI - Current.png` | Current local UI in its signed-out state |
+| API response image | `screenshots/API Unauthorized - Current.png` | Current unauthenticated API response |
 | Walkthrough capture | `screenshots/demo_run_output.txt` | Captured output from an earlier local demo walkthrough |
 
 ## 4. Checklist Design
@@ -120,7 +123,7 @@ I wrote 24 tests in `demo/test_app.py`. I ran them from the `demo` directory wit
 
 It was run from the `demo` directory on 24 October 2026 using Python 3.12.10, Flask 3.1.3, Werkzeug 3.1.9, and ItsDangerous 2.2.0.
 
-**Result: 24 tests passed in 2.603 seconds (`OK`).**
+**Result: 24 tests passed in 2.643 seconds (`OK`).**
 
 The tests cover:
 
@@ -135,7 +138,7 @@ The tests cover:
 - Security and deprecation headers.
 - Logs not containing passwords or access tokens.
 
-The suite verifies selected API behavior and UI route/asset delivery; it does not provide browser automation for interactive UI behavior and does not verify every checklist item. The result is recorded in `screenshots/test-results.txt`.
+The suite verifies selected API behavior and UI route/asset delivery; it does not provide browser automation for interactive UI behavior and does not verify every checklist item. The result is recorded in `screenshots/test-results.txt` and a rendered summary is provided in `screenshots/Automated Tests - Current.png`.
 
 ### 6.2 Manual walkthrough evidence
 

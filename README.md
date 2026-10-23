@@ -53,6 +53,9 @@ All examples use a **local demo with fictional data**. Nothing here targets a re
 │   ├── technical-report.md
 │   └── research-notes.md
 └── screenshots/
+    ├── API Unauthorized - Current.png
+    ├── Automated Tests - Current.png
+    ├── Frontend UI - Current.png
     ├── demo_run_output.txt
     └── test-results.txt
 ```

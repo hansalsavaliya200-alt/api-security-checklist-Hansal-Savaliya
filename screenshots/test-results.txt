@@ -1,20 +1,33 @@
-API Security Demo - Automated Test Result
-Run date: 24 October 2026
+API Security Demo - Automated Test Run
+Date: 24 October 2026
 Command: .\.venv\Scripts\python.exe -m unittest -v test_app.py
-Environment: Python 3.12.10, Flask 3.1.3, Werkzeug 3.1.9, ItsDangerous 2.2.0
+Environment: Python 3.12.10 | Flask 3.1.3 | Werkzeug 3.1.9 | ItsDangerous 2.2.0
 
-Ran 24 tests in 2.603s
-Result: OK (all 24 tests passed)
+Ran 24 tests in 2.643s
+OK
 
-The test suite covers:
-- Frontend route, static assets, and Content Security Policy
-- Health and authenticated profile endpoints
-- Missing, tampered, and invalid authentication
-- Generic login errors for unknown users and wrong passwords
-- Note ownership checks for reads, updates, deletes, and listing
-- Input validation, content type, body size, and malformed identifiers
-- Public response field allow-listing
-- Login rate limiting, Retry-After, and rate-limit headers
-- Generic error responses and hidden internal exception details
-- Security and API deprecation response headers
-- Logs excluding passwords and access tokens
+Test cases:
+  PASS  test_frontend_and_assets_are_served_with_csp
+  PASS  test_health_endpoint_is_200
+  PASS  test_profile_endpoint_returns_current_user
+  PASS  test_no_token_is_401
+  PASS  test_tampered_token_is_401
+  PASS  test_wrong_password_and_unknown_user_same_response
+  PASS  test_cannot_read_or_delete_other_users_note
+  PASS  test_missing_and_foreign_notes_look_identical
+  PASS  test_list_only_returns_own_notes
+  PASS  test_can_update_own_note
+  PASS  test_cannot_update_other_users_note
+  PASS  test_validation_rejects_bad_input
+  PASS  test_wrong_content_type_is_415
+  PASS  test_oversized_body_is_413
+  PASS  test_malformed_id_is_404_not_500
+  PASS  test_internal_fields_never_returned
+  PASS  test_login_rate_limit
+  PASS  test_429_has_retry_after
+  PASS  test_rate_limit_headers_are_exposed
+  PASS  test_errors_are_generic_and_carry_request_id
+  PASS  test_unexpected_exception_hides_details
+  PASS  test_security_headers_present
+  PASS  test_deprecated_version_signals_sunset
+  PASS  test_logs_do_not_contain_secrets
