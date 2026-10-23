@@ -34,10 +34,14 @@ The source review date and research notes are documented in [`report/research-no
 24. T-Mobile US, Inc. *Form 8-K*, 19 January 2023. https://www.sec.gov/Archives/edgar/data/1283699/000119312523010949/d641142d8k.htm
 25. TechCrunch. *Peloton's leaky API let anyone grab riders' private account data*, 5 May 2021. https://techcrunch.com/2021/05/05/peloton-bug-account-data-leak/
 26. CSO Online. *Optus breach occurred due to a coding error, alleges ACMA* (an allegation; Optus disputes it). https://www.csoonline.com/article/2492520/optus-breach-occurred-due-to-a-coding-error-alleges-acma.html
+27. USPS: The Hacker News, "USPS Data Breach", November 2018 — https://thehackernews.com/2018/11/usps-data-breach.html
+28.Dell: BleepingComputer, "Dell API abused to steal 49 million customer records in data breach", May 2024 — https://www.bleepingcomputer.com/news/security/dell-api-abused-to-steal-49-million-customer-records-in-data-breach/
+29.Trello: Help Net Security, "Data of 15 million Trello users scraped and offered for sale", 23 January 2024 — https://www.helpnetsecurity.com/2024/01/23/trello-users-data-scraped/
+30.Parler: The New Stack, "How Parler's Data Was Harvested", January 2021 — https://thenewstack.io/how-parlers-data-was-harvested/
 
 ## Tools used for the demo
-27. Flask documentation. https://flask.palletsprojects.com/
-28. Werkzeug security helpers (password hashing). https://werkzeug.palletsprojects.com/
-29. ItsDangerous (signed, timed tokens). https://itsdangerous.palletsprojects.com/
+31. Flask documentation. https://flask.palletsprojects.com/
+32. Werkzeug security helpers (password hashing). https://werkzeug.palletsprojects.com/
+33. ItsDangerous (signed, timed tokens). https://itsdangerous.palletsprojects.com/
 
 *Note on ASVS (item 11): the OWASP project page lists 5.0.0 as the latest version but labels its stability inconsistently. State the exact version you consulted.*
