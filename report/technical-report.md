@@ -177,7 +177,7 @@ The suite verifies selected API behavior and UI route/asset delivery; it does no
 
 `screenshots/demo_run_output.txt` captures an earlier local run of `demo/run_demo.sh`. It demonstrates unauthenticated access, login, note creation, rejection of a mass-assignment field, denial of another user's note, owner access, version deprecation headers, and login rate limiting. Since the walkthrough logs in two users before submitting six invalid login attempts, those earlier successful logins consume part of the per-IP login allowance; therefore, the first three invalid attempts receive 401 and later attempts receive 429. This is a capture from that run, not a claim that the walkthrough was rerun with the latest test execution.
 
-Older terminal screenshots show prior test runs and are retained as historical evidence. The current automated result is the 25-test record in `screenshots/test-results.txt`.
+The current automated result is the 25-test record in `screenshots/test-results.txt`; outdated historical screenshots have been removed so the folder contains the current evidence.
 
 I also started the local demo and checked its health endpoint, which returned an `ok` status. An unauthenticated request to the notes endpoint returned 401. I captured fresh screenshots of the signed-out browser interface and that unauthorized API response; the current images are in `screenshots/`.
 
