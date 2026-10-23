@@ -1,6 +1,6 @@
 # Research Notes: API Security Checklist
 
-Compiled 14 October 2026. Every page below was opened and read on that date; summaries are paraphrased. Re-open the links yourself before submitting and keep your own "accessed" dates.
+Compiled 14 October 2026. Every page below was opened and read on that date; summaries are paraphrased.
 
 ## 1. What was checked and what it means for the checklist
 

@@ -1,6 +1,6 @@
 # References
 
-Check each link opens before you submit, and add the "accessed" date you actually used.
+The source review date and research notes are documented in [`report/research-notes.md`](report/research-notes.md).
 
 ## Standards and guidance
 1. OWASP Foundation. *OWASP API Security Top 10 – 2023.* https://owasp.org/API-Security/editions/2023/en/0x11-t10/

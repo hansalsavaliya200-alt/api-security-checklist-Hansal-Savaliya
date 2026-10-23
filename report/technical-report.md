@@ -155,7 +155,7 @@ I wrote 25 tests in `demo/test_app.py`. I ran them from the `demo` directory wit
 
 It was run from the `demo` directory on 24 October 2026 using Python 3.12.10, Flask 3.1.3, Werkzeug 3.1.9, and ItsDangerous 2.2.0.
 
-**Result: 25 tests passed in 3.146 seconds (`OK`).**
+**Result: 25 tests passed in 3.058 seconds (`OK`).**
 
 The tests cover:
 
