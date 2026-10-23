@@ -1,14 +1,46 @@
-# Technical Report: API Security Checklist for REST / Web APIs
+<!-- cover-start -->
 
-**Intern:** Hansal Savaliya  
-**Intern ID:** 2424  
-**Organisation:** RedKross Research Foundation Internship  
-**Assignment:** API Security  
-**Report date:** 24 October 2026  
-**GitHub repository:** https://github.com/hansalsavaliya200-alt/api-security-checklist-Hansal-Savaliya  
-**Explanatory video:** `[Add video URL before submission]`
+# Technical Report
 
----
+## API Security Checklist for REST / Web APIs
+
+**Internship Assignment · API Security**
+
+| Prepared by | Assignment details |
+|---|---|
+| Hansal Savaliya | Intern ID: 2424 |
+| RedKross Research Foundation Internship | Report date: 24 October 2026 |
+
+| Links | Destination |
+|---|---|
+| GitHub repository | [api-security-checklist-Hansal-Savaliya](https://github.com/hansalsavaliya200-alt/api-security-checklist-Hansal-Savaliya) |
+| Explanatory video | `[Add video URL before submission]` |
+
+### Project overview
+
+This report documents a practical API security checklist, research and safe request/response examples, together with a small Flask demonstration using fictional accounts and data. The demo runs locally and illustrates selected controls; it is not a production service or a penetration test.
+
+**Test result:** 24 automated tests passed · Python 3.12.10 · Flask 3.1.3
+
+<!-- cover-end -->
+<!-- pagebreak -->
+
+## Contents
+
+1. [Objective and Scope](#1-objective-and-scope)
+2. [Background Research](#2-background-research)
+3. [Deliverables](#3-deliverables)
+4. [Checklist Design](#4-checklist-design)
+5. [Demo Design and Implementation](#5-demo-design-and-implementation)
+6. [Testing and Results](#6-testing-and-results)
+7. [Findings](#7-findings)
+8. [Recommendations](#8-recommendations)
+9. [Limitations](#9-limitations)
+10. [Conclusion](#10-conclusion)
+11. [AI Assistance Declaration](#11-ai-assistance-declaration)
+12. [References](#12-references)
+
+<!-- pagebreak -->
 
 ## Project Overview
 
