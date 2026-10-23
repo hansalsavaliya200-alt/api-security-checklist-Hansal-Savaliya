@@ -1,0 +1,20 @@
+API Security Demo - Automated Test Result
+Run date: 24 October 2026
+Command: .\.venv\Scripts\python.exe -m unittest -v test_app.py
+Environment: Python 3.12.10, Flask 3.1.3, Werkzeug 3.1.9, ItsDangerous 2.2.0
+
+Ran 24 tests in 2.603s
+Result: OK (all 24 tests passed)
+
+The test suite covers:
+- Frontend route, static assets, and Content Security Policy
+- Health and authenticated profile endpoints
+- Missing, tampered, and invalid authentication
+- Generic login errors for unknown users and wrong passwords
+- Note ownership checks for reads, updates, deletes, and listing
+- Input validation, content type, body size, and malformed identifiers
+- Public response field allow-listing
+- Login rate limiting, Retry-After, and rate-limit headers
+- Generic error responses and hidden internal exception details
+- Security and API deprecation response headers
+- Logs excluding passwords and access tokens

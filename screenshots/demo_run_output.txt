@@ -1,0 +1,58 @@
+== 1. No token -> 401
+HTTP/1.1 401 UNAUTHORIZED
+WWW-Authenticate: Bearer
+{"error":{"code":"unauthenticated","message":"Authentication required.","request_id":"857872504e81"}}
+
+== 2. Login as alice
+got tokens (not printed)
+
+== 3. Create a note as alice (valid)
+HTTP/1.1 201 CREATED
+Location: /api/v1/notes/b8701643-626e-4127-91e4-9aad8f4947ae
+X-Request-ID: d8be5694ae86
+{
+    "body": "milk, eggs",
+    "created_at": 1792001399,
+    "id": "b8701643-626e-4127-91e4-9aad8f4947ae",
+    "title": "Groceries"
+}
+
+== 4. Mass-assignment attempt (extra field) -> 400
+{
+    "error": {
+        "code": "validation_error",
+        "message": "Unknown field(s) not allowed.",
+        "request_id": "368713bb92de"
+    }
+}
+
+== 5. Bob tries to read alice's note -> 404 (same as missing)
+{
+    "error": {
+        "code": "not_found",
+        "message": "Resource not found.",
+        "request_id": "ac45173ab1dc"
+    }
+}
+
+== 6. Alice reads her own note -> 200, only public fields
+{
+    "body": "milk, eggs",
+    "created_at": 1792001399,
+    "id": "b8701643-626e-4127-91e4-9aad8f4947ae",
+    "title": "Groceries"
+}
+
+== 7. Deprecated v0 shows Deprecation/Sunset headers
+HTTP/1.1 200 OK
+Deprecation: @1767225600
+Sunset: Wed, 31 Mar 2027 23:59:59 GMT
+Link: </api/v1/notes>; rel="successor-version"
+
+== 8. Rate limit on login (6 quick bad attempts)
+attempt 1 -> 401
+attempt 2 -> 401
+attempt 3 -> 401
+attempt 4 -> 429
+attempt 5 -> 429
+attempt 6 -> 429

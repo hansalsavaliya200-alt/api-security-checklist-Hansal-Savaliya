@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Security Demo</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Local demo</p>
+          <h1>API Security Console</h1>
+        </div>
+        <div class="header-actions">
+          <button id="themeBtn" class="secondary" type="button" aria-pressed="false">Dark mode</button>
+          <button id="logoutBtn" class="secondary hidden" type="button">Log out</button>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card dashboard-panel">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">At a glance</p>
+              <h2>API dashboard</h2>
+            </div>
+            <span id="apiStatus" class="status-pill pending">Checking API</span>
+          </div>
+          <div class="metrics-grid">
+            <article class="metric">
+              <span>Total notes</span>
+              <strong id="noteCount">—</strong>
+            </article>
+            <article class="metric">
+              <span>Rate limit remaining</span>
+              <strong id="rateRemaining">—</strong>
+            </article>
+            <article class="metric">
+              <span>Window resets in</span>
+              <strong id="rateReset">—</strong>
+            </article>
+            <article class="metric">
+              <span>API uptime</span>
+              <strong id="uptime">—</strong>
+            </article>
+          </div>
+          <div class="chart-heading">
+            <h3>Notes created over the last 7 days</h3>
+            <span id="chartCaption">Sign in to view activity</span>
+          </div>
+          <div id="activityChart" class="activity-chart" role="img" aria-label="Recent note activity"></div>
+        </section>
+
+        <section class="card auth-panel">
+          <h2>Authentication</h2>
+          <form id="loginForm">
+            <label>
+              Username
+              <input name="username" type="text" value="alice" required />
+            </label>
+            <label>
+              Password
+              <input name="password" type="password" value="demo-password-alice" required />
+            </label>
+            <button type="submit">Sign in</button>
+          </form>
+          <p id="authStatus" class="status neutral">Not signed in.</p>
+        </section>
+
+        <section class="card info-panel">
+          <h2>Health</h2>
+          <div id="healthInfo" class="json-block">Loading...</div>
+        </section>
+
+        <section class="card notes-panel">
+          <div class="section-header">
+            <h2>Notes</h2>
+            <button id="refreshBtn" class="secondary">Refresh</button>
+          </div>
+
+          <form id="noteForm" class="note-form">
+            <label>
+              Title
+              <input name="title" type="text" maxlength="100" required />
+            </label>
+            <label>
+              Body
+              <textarea name="body" rows="4" maxlength="1000" required></textarea>
+            </label>
+            <button type="submit">Create note</button>
+          </form>
+
+          <ul id="notesList" class="notes-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
