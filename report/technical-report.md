@@ -14,7 +14,7 @@
 | Links | Destination |
 |---|---|
 | GitHub repository | [api-security-checklist-Hansal-Savaliya](https://github.com/hansalsavaliya200-alt/api-security-checklist-Hansal-Savaliya) |
-| Explanatory video | `[Add video URL before submission]` |
+| Explanatory video | [Watch the project walkthrough](https://drive.google.com/file/d/1S2v_-fVp-0tyqPAlmKH5gytJgynu3fsu/view?usp=sharing) |
 
 ### Project overview
 

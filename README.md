@@ -4,7 +4,7 @@ RedKross Research Foundation internship task, **Intern ID 2424**.
 
 **GitHub repository:** [api-security-checklist-Hansal-Savaliya](https://github.com/hansalsavaliya200-alt/api-security-checklist-Hansal-Savaliya)
 
-**Explanatory video:** [Add your YouTube (unlisted) or Google Drive link here]
+**Explanatory video:** [Watch the project walkthrough](https://drive.google.com/file/d/1S2v_-fVp-0tyqPAlmKH5gytJgynu3fsu/view?usp=sharing)
 
 ## Objective
 Develop a defensive checklist for REST/web APIs covering authentication, object-level authorisation, input validation, rate limiting, error handling, transport security, secrets, logging, and version/deprecation management, with a simple example of safe request/response design and references.
